@@ -1,0 +1,7 @@
+flask
+PyPDF2
+neo4j
+python-dotenv
+langchain
+langchain-community
+werkzeug

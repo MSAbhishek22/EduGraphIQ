@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EduGraphIQ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="control-panel">
+            <h1>EduGraphIQ</h1>
+            <form id="uploadForm">
+                <div class="file-upload">
+                    <input type="file" id="fileInput" name="file" accept=".pdf" />
+                    <label for="fileInput" class="upload-btn">Choose PDF</label>
+                    <div id="filePreview" class="file-preview"></div>
+                </div>
+                <button type="submit" class="action-btn process-btn">Process PDF</button>
+            </form>
+            
+            <div id="processStatus" class="process-status">
+                <div class="status-message"></div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="startQuiz" class="action-btn">Start Quiz</button>
+                <button id="viewFlashcards" class="action-btn">View Flashcards</button>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div id="conceptMap"></div>
+            <div class="node-details"></div>
+        </div>
+        <div id="quizSection" class="quiz-section"></div>
+        <div id="flashcardSection" class="flashcard-section"></div>
+    </div>
+    <!-- Add this before your main.js script -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

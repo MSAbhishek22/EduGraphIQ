@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduGraphIQ – Smart Learning Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .logo {
+      width: 70px;
+      margin-bottom: 20px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+      color: #f1f1f1;
+    }
+
+    input[type="file"] {
+      background: #fff;
+      color: #333;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #00c853;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00b248;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #eee;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/ffffff/open-book--v2.png" alt="Logo"/>
+    <h1>EduGraphIQ</h1>
+    <p>Upload an academic PDF to generate an interactive Knowledge Graph!</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="pdf" accept="application/pdf" required /><br/>
+      <button type="submit">🚀 Generate Graph</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    🚀 Project by <strong>M S Abhishek</strong> & Team for GraphRAG Hackathon 💡
+  </div>
+</body>
+</html>
