@@ -1,14 +1,7 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Ignore virtual environment
 venv/
-.env
 
-# VSCode
-.vscode/
-
-# OS files
+# Ignore other unnecessary files
+*.pyc
+__pycache__/
 .DS_Store
-Thumbs.db
